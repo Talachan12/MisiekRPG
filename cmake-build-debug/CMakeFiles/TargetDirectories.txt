@@ -1,0 +1,3 @@
+/Users/michaltalacha/CLionProjects/polimofrizmcwiczenia/cmake-build-debug/CMakeFiles/polimofrizmcwiczenia.dir
+/Users/michaltalacha/CLionProjects/polimofrizmcwiczenia/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/michaltalacha/CLionProjects/polimofrizmcwiczenia/cmake-build-debug/CMakeFiles/rebuild_cache.dir
