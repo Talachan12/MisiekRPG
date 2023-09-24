@@ -11,6 +11,9 @@ Wojownik wojownik1;
 Mag mag1;
 Zlodziej zlodziej1;
 
+Przeciwnik *enemy_pointer;
+
+
 
 void Game::game_wojownik(){
     pointer = &wojownik1;
@@ -67,7 +70,8 @@ void Game::game_zlodziej(){
 
 void Game::walka(){
     Bandyta bandyta1("Ziutek", 100, 20);
-    bandyta1.pokaz_przeciwnika();
+    enemy_pointer = &bandyta1;
+    enemy_pointer ->pokaz_przeciwnika();
     chrono::seconds czas(2);
     this_thread::sleep_for(czas);
     cout << endl;
@@ -75,9 +79,9 @@ void Game::walka(){
     pointer ->pokaz_postac();
     this_thread::sleep_for(czas);
     cout << endl;
-    cout << "Bandyta atakuje..." << endl;
+    cout << "Walka trwa!" << endl;
     this_thread::sleep_for(czas);
-    pointer ->odejmij_hp();
+    enemy_pointer ->odejmij_hp_bandyta();
 };
 
 void Game::wygrana_walka() {

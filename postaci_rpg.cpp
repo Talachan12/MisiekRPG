@@ -8,48 +8,56 @@ using namespace std;
 
 
 void Wojownik::pokaz_postac() {
-    cout << "Imie Wojownika: " << imie << endl;
+    cout << "Imie: " << imie << endl;
     cout << "Pancerz: " << pancerz << endl;
     cout << "Życie: " << zycie << endl;
     cout << "Siła: " << sila << endl;
+    cout << "Klasa: " << klasa << endl;
     cout << endl;
 }
 
-Wojownik::Wojownik(std::string t_name, int t_pancerz, int t_zycie, int t_sila) {
+Wojownik::Wojownik(std::string t_name, int t_pancerz, int t_zycie, int t_sila, string t_klasa) {
     imie = t_name;
     pancerz = t_pancerz;
     zycie = t_zycie;
     sila = t_sila;
+    klasa = t_klasa;
 }
 
 void Mag::pokaz_postac() {
-    cout << "Imie Maga: " << imie << endl;
+    cout << "Imie: " << imie << endl;
     cout << "Mana: " << mana << endl;
+    cout << "Klasa: " << klasa << endl;
     cout << endl;
 }
 
-Mag::Mag(std::string t_name, int t_wartosc, int t_zycie) {
+Mag::Mag(std::string t_name, int t_wartosc, int t_zycie, string t_klasa) {
     imie = t_name;
     mana = t_wartosc;
     zycie = t_zycie;
+    klasa = t_klasa;
 }
 
 void Zlodziej::pokaz_postac() {
-    cout << "Imie Złodzieja: " << imie << endl;
+    cout << "Imie: " << imie << endl;
     cout << "Zręczność: " << zrecznosc << endl;
+    cout << "Klasa: " << klasa << endl;
     cout << endl;
 }
 
-Zlodziej::Zlodziej(std::string t_name, int t_wartosc, int t_zycie) {
+Zlodziej::Zlodziej(std::string t_name, int t_wartosc, int t_zycie, string t_klasa) {
     imie = t_name;
     zrecznosc = t_wartosc;
     zycie = t_zycie;
+    klasa = t_klasa;
 }
 
-Bandyta::Bandyta(std::string t_imie, int t_zycie, int t_sila) {
+Bandyta::Bandyta(std::string t_imie, int t_zycie, int t_sila, string t_klasa) {
     imie = t_imie;
     zycie = t_zycie;
     sila = t_sila;
+    klasa = t_klasa;
+
 
 }
 
@@ -58,6 +66,7 @@ void Bandyta::pokaz_przeciwnika() {
     cout << "Imie: " << imie << endl;
     cout << "Zycie: " << zycie << endl;
     cout << "Sila: " << sila << endl;
+    cout << "Klasa: " << klasa << endl;
 }
 
 void Wojownik::odejmij_hp() {
@@ -80,5 +89,5 @@ void Zlodziej::odejmij_hp() {
 
 void Bandyta::odejmij_hp_bandyta() {
     zycie -= 100;
-    cout << "Obecne życie bandyty: " << endl;
+    cout << "Obecne życie bandyty: " <<  zycie << endl;
 }

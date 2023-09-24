@@ -5,4 +5,5 @@ public:
     static void game_zlodziej(); //gameplay dla zlodzieja
     static void walka();
     static void wygrana_walka();
+    static int main();
 };

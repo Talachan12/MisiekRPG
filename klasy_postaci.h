@@ -18,8 +18,9 @@ protected:
     int pancerz;
     int zycie;
     int sila;
+    string klasa;
 public:
-    Wojownik(string t_name = "Misiek", int t_pancerz = 30, int t_zycie = 100, int t_sila = 40);
+    Wojownik(string t_name = "Misiek", int t_pancerz = 30, int t_zycie = 100, int t_sila = 40, string t_klasa = "Wojownik");
     virtual void pokaz_postac();
     virtual void odejmij_hp();
 };
@@ -28,8 +29,9 @@ class Mag :public Postac{
     string imie;
     int mana;
     int zycie;
+    string klasa;
 public:
-    Mag(string t_name = "Krzychu", int t_wartosc = 50, int t_zycie = 100);
+    Mag(string t_name = "Krzychu", int t_wartosc = 50, int t_zycie = 100, string t_klasa = "Mag");
     virtual void pokaz_postac();
     virtual void odejmij_hp();
 
@@ -39,8 +41,9 @@ class Zlodziej: public Postac{
     string imie;
     int zrecznosc;
     int zycie;
+    string klasa;
 public:
-    Zlodziej(string t_name = "Barlik", int t_wartosc = 60, int t_zycie = 100);
+    Zlodziej(string t_name = "Barlik", int t_wartosc = 60, int t_zycie = 100, string t_klasa = "Złodziej");
     virtual void pokaz_postac();
     virtual void odejmij_hp();
 
@@ -57,8 +60,9 @@ class Bandyta : public Przeciwnik{
     string imie;
     int zycie;
     int sila;
+    string klasa;
 public:
-    Bandyta(string t_imie, int t_zycie, int t_sila);
+    Bandyta(string t_imie, int t_zycie, int t_sila, string t_klasa = "Bandyta");
     virtual void pokaz_przeciwnika();
     virtual void odejmij_hp_bandyta();
 };
