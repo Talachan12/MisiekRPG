@@ -7,6 +7,7 @@ class Postac{
 public:
     virtual void pokaz_postac() = 0;
     virtual void odejmij_hp()= 0;
+    virtual void smierc()=0;
 
 
 
@@ -23,6 +24,7 @@ public:
     Wojownik(string t_name = "Misiek", int t_pancerz = 30, int t_zycie = 100, int t_sila = 40, string t_klasa = "Wojownik");
     virtual void pokaz_postac();
     virtual void odejmij_hp();
+    virtual void smierc();
 };
 
 class Mag :public Postac{
@@ -34,6 +36,7 @@ public:
     Mag(string t_name = "Krzychu", int t_wartosc = 50, int t_zycie = 100, string t_klasa = "Mag");
     virtual void pokaz_postac();
     virtual void odejmij_hp();
+    virtual void smierc();
 
 };
 
@@ -46,6 +49,7 @@ public:
     Zlodziej(string t_name = "Barlik", int t_wartosc = 60, int t_zycie = 100, string t_klasa = "Złodziej");
     virtual void pokaz_postac();
     virtual void odejmij_hp();
+    virtual void smierc();
 
 };
 

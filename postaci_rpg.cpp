@@ -31,6 +31,7 @@ void Mag::pokaz_postac() {
     cout << endl;
 }
 
+
 Mag::Mag(std::string t_name, int t_wartosc, int t_zycie, string t_klasa) {
     imie = t_name;
     mana = t_wartosc;
@@ -62,7 +63,7 @@ Bandyta::Bandyta(std::string t_imie, int t_zycie, int t_sila, string t_klasa) {
 }
 
 void Bandyta::pokaz_przeciwnika() {
-    cout << "Spotykasz Bandytę!" << endl;
+    cout << "Spotykasz przeciwnika!" << endl;
     cout << "Imie: " << imie << endl;
     cout << "Zycie: " << zycie << endl;
     cout << "Sila: " << sila << endl;
@@ -89,5 +90,19 @@ void Zlodziej::odejmij_hp() {
 
 void Bandyta::odejmij_hp_bandyta() {
     zycie -= 100;
-    cout << "Obecne życie bandyty: " <<  zycie << endl;
+    cout << "Obecne życie przeciwnika: " <<  zycie << endl;
+}
+void Wojownik::smierc() {
+    zycie -= 100;
+    cout << "Umierasz." << endl;
+}
+
+void Mag::smierc() {
+    zycie -= 100;
+    cout << "Umierasz." << endl;
+}
+
+void Zlodziej::smierc() {
+    zycie -= 100;
+    cout << "Umierasz." << endl;
 }
