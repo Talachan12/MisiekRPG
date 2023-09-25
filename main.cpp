@@ -30,7 +30,7 @@ int main() {
         if (cin.fail()) {
             cin.clear();
             cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            cerr << "Nieprawidłowa wartość!" << endl;
+            cout << "Nieprawidłowa wartość!" << endl;
         }
         switch (wybor) {
             case 1: {
@@ -54,7 +54,7 @@ int main() {
                     cout << "Wybrano klasę: Złodziej" << endl;
                     Game::game_zlodziej();
                 } else {
-                    cerr << "Niepoprawna klasa!" << endl;
+                    cout << "Niepoprawna klasa!" << endl;
                     break;
                 }
             }

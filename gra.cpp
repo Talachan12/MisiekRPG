@@ -30,7 +30,7 @@ void Game::game_wojownik(){
     if (cin.fail()){
         cin.clear();
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        cerr << "Nieprawidłowa wartość!" << endl;
+        cout << "Nieprawidłowa wartość!" << endl;
         game_wojownik();
     }
     switch (wybor_wojownik) {
@@ -57,11 +57,11 @@ void Game::game_wojownik(){
                 }
             else if (wybor_karczma_wojownik == "nie" || wybor_karczma_wojownik == "Nie"){
                 cout << "Uznałeś, że lepiej na dzisiaj już przestać i wróciłeś do chaty." << endl;
-                cerr << "Koniec gry" << endl;
+                cout << "Koniec gry" << endl;
                 game_wojownik();
             }
             else {
-                cerr << "Nieprawidłowa wartość" << endl;
+                cout << "Nieprawidłowa wartość" << endl;
                 game_wojownik();
 
             }
@@ -77,7 +77,7 @@ void Game::game_wojownik(){
             cout << "..." << endl;
             polowanie();
             cout << "Zwierzę okazało się zbyt silne...jeleń porożem przebił Ci tętnice." << endl;
-            cerr << "Koniec gry." << endl;
+            cout << "Koniec gry." << endl;
         }
         case 3:{
             exit(0);
@@ -99,7 +99,7 @@ void Game::game_mag(){
     if (cin.fail()){
         cin.clear();
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        cerr << "Nieprawidłowa wartość!" << endl;
+        cout << "Nieprawidłowa wartość!" << endl;
         game_mag();
     }
     switch (wybor_mag) {
@@ -118,7 +118,7 @@ void Game::game_mag(){
             cout << "Gratulacje! Poznałeś nowe zaklęcie: Kula ognia" << endl;
             chrono::seconds czas(2);
             this_thread::sleep_for(czas);
-            cout << "Zmęczony uznałes, że wracasz do swojego pokoju i idziesz spać" << endl;
+            cout << "Zmęczony uznałes, że wracasz do swojego pokoju i idziesz spać." << endl;
             cout << "Koniec gry. " << endl;
             cout << "RESETOWANIE DNIA" << endl;
             this_thread::sleep_for(czas);
@@ -134,7 +134,7 @@ void Game::game_mag(){
             chrono::seconds czas(2);
             cout << "Zakradasz się do gabinetu Arcymaga..." << endl;
             this_thread::sleep_for(czas);
-            cout << "Próbujesz otworzyć drzwi wytrychem.." << endl;
+            cout << "Próbujesz otworzyć drzwi wytrychem..." << endl;
             this_thread::sleep_for(czas);
             if (liczba_losowa == 6){
                 cout << "Udało Ci się włamać, znalazłeś tam sakiewkę ze złotem i zwoje magiczne!" << endl;
