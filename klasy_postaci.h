@@ -8,6 +8,7 @@ public:
     virtual void pokaz_postac() = 0;
     virtual void odejmij_hp()= 0;
     virtual void smierc()=0;
+    virtual void ulecz()=0;
 
 
 
@@ -25,6 +26,7 @@ public:
     virtual void pokaz_postac();
     virtual void odejmij_hp();
     virtual void smierc();
+    virtual void ulecz();
 };
 
 class Mag :public Postac{
@@ -37,6 +39,7 @@ public:
     virtual void pokaz_postac();
     virtual void odejmij_hp();
     virtual void smierc();
+    virtual void ulecz();
 
 };
 
@@ -50,6 +53,7 @@ public:
     virtual void pokaz_postac();
     virtual void odejmij_hp();
     virtual void smierc();
+    virtual void ulecz();
 
 };
 

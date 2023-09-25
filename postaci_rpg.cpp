@@ -26,6 +26,7 @@ Wojownik::Wojownik(std::string t_name, int t_pancerz, int t_zycie, int t_sila, s
 
 void Mag::pokaz_postac() {
     cout << "Imie: " << imie << endl;
+    cout << "Zycie:  " << zycie << endl;
     cout << "Mana: " << mana << endl;
     cout << "Klasa: " << klasa << endl;
     cout << endl;
@@ -41,6 +42,7 @@ Mag::Mag(std::string t_name, int t_wartosc, int t_zycie, string t_klasa) {
 
 void Zlodziej::pokaz_postac() {
     cout << "Imie: " << imie << endl;
+    cout << "Zycie:  " << zycie << endl;
     cout << "Zręczność: " << zrecznosc << endl;
     cout << "Klasa: " << klasa << endl;
     cout << endl;
@@ -105,4 +107,20 @@ void Mag::smierc() {
 void Zlodziej::smierc() {
     zycie -= 100;
     cout << "Umierasz." << endl;
+}
+
+void Wojownik::ulecz() {
+    zycie += 60;
+    cout << "Uleczono się, twoje życie wynosi teraz: " << zycie << endl;
+}
+
+void Mag::ulecz() {
+    zycie += 40;
+    cout << "Uleczono się, twoje życie wynosi teraz: " << zycie << endl;
+}
+
+void Zlodziej::ulecz() {
+    zycie += 50;
+    cout << "Uleczono się, twoje życie wynosi teraz: " << zycie << endl;
+
 }
