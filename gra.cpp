@@ -81,6 +81,7 @@ void Game::walka(){
     cout << endl;
     cout << "Walka trwa!" << endl;
     this_thread::sleep_for(czas);
+    pointer->odejmij_hp();
     enemy_pointer ->odejmij_hp_bandyta();
 };
 
