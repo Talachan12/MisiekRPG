@@ -27,6 +27,9 @@ public:
     virtual void odejmij_hp();
     virtual void smierc();
     virtual void ulecz();
+    ~Wojownik(){
+        cout << "DEBUG: Zwolniono miejsce w pamieci obiektu Wojownik" << endl;
+    }
 };
 
 class Mag :public Postac{
@@ -40,6 +43,9 @@ public:
     virtual void odejmij_hp();
     virtual void smierc();
     virtual void ulecz();
+    ~Mag(){
+        cout << "DEBUG: Zwolniono miejsce w pamieci obiektu Mag" << endl;
+    }
 
 };
 
@@ -54,6 +60,9 @@ public:
     virtual void odejmij_hp();
     virtual void smierc();
     virtual void ulecz();
+    ~Zlodziej(){
+        cout << "DEBUG: Zwolniono miejsce w pamieci obiektu Zlodziej" << endl;
+    }
 
 };
 
@@ -73,5 +82,8 @@ public:
     Bandyta(string t_imie, int t_zycie, int t_sila, string t_klasa = "Bandyta");
     virtual void pokaz_przeciwnika();
     virtual void odejmij_hp_bandyta();
+    ~Bandyta(){
+        cout << "DEBUG: Zwolniono miejsce w pamieci obiektu Bandyta" << endl;
+    }
 };
 
